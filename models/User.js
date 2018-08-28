@@ -18,7 +18,7 @@ const userSchema = new Schema({
     type: String
   },
   image: {
-    typpe: String
+    type: String
   }
 });
 

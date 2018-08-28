@@ -1,0 +1,42 @@
+ {{#if story}}
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  {{#each story}}
+  <tbody>
+    <tr>
+      <td>
+        <a href="/stories/show/{{id}}">{{title}}</a>
+      </td>
+      <td>{{formatDate date "MMMM do YYYY"}}</td>
+      <td>
+        <span class="ninja">{{status}}</span>
+      </td>
+      <td>
+        <a href="/stories/edit/{{id}}" class="btn blue">
+          <i class="fa fa-pencil"> Edit</i>
+        </a>
+        <form action="/stories/{{id}}?_method=DELETE" method="POST" class="gk">
+          <input type="hidden" name="_method" value="DELETE">
+
+          <button type="submit" class="btn red">
+            <i class="fa fa-remove"></i> Delete
+          </button>
+        </form>
+
+      </td>
+    </tr>
+  </tbody>
+  {{/each}}
+</table>
+{{else}}
+
+<p>you have not created any stories</p>
+
+{{/if}}

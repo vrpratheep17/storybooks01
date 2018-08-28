@@ -1,0 +1,39 @@
+<h2> Add stories</h2>
+<div class="row">
+  <form action="/stories" method="POST" class="col s12">
+
+    <div class="row">
+      <div class="input-field ">
+        <input name="title" type="text">
+        <label class="active" for="first_name2">Title</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <select name="status">
+          <option value="public" selected>Public</option>
+          <option value="private">Private</option>
+          <option value="unpublished">Unpublished</option>
+        </select>
+        <label>Status</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <p>
+          <label>
+            <input type="checkbox" name="allowComments" class="filled-in" checked="checked" id="filled-in-box" />
+            <span>Allow comments</span>
+          </label>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field ">
+        <h5>Tell your Stories</h5>
+        <textarea name="body" class="materialize-textarea" data-length="120"></textarea>
+      </div>
+    </div>
+    <input type="submit" class="btn" value="Save">
+  </form>
+</div>
